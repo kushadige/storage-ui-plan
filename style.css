@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --bg-color: #C7CACC;
+    --temp-color1: #967864;
+    --temp-color2: #949494;
+    --temp-color3: #7C5034;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    background-color: var(--bg-color);
+    color: #131313;
+    min-height: 100vh;
+}
+
+.total-storage {
+    background: #eee;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.total-storage::before {
+    content: '';
+    width: 90%; 
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #C7CACC;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.total-storage > h1 {
+    font-size: 1.2rem;
+}
+
+.total-storage > h1 i {
+    background: #fff;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.total-storage > div {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    margin-top: 35px;
+}
+
+.storage-chart {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #A0CCE2;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slice {
+    overflow: hidden;
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%; height: 50%;
+    transform-origin: bottom left; /* or 0% 100% */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slice > div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: #424FC0;
+    left: -100%;
+    border-radius: 50%;
+}
+
+.slice:first-child {
+    transform: rotate(0deg) skewY(-50deg);
+}
+
+.slice:first-child > div {
+    transform: skewY(50deg);
+}
+
+.storage-info {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.storage-info p {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.secondary {
+    color: #424FC0;
+    margin: 15px 0;
+}
+
+.btn {
+    background: #131313;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: .85rem;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.plans::before {
+    content: '';
+    position: absolute;
+    height: 120%;
+    width: 90%;
+    background: #C7CACC;
+    border: 1px solid #fff;
+    z-index: -1;
+    bottom: -20px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plans > h1 {
+    font-size: 1.2rem;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+
+.box {
+    background: #eee;
+    width: 430px;
+    height: 160px;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box.current {
+    background: #131313;
+    color: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.box.current p {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+
+.box > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.box .secondary {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.box h2 {
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+}
+
+.box h2::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: coral;
+    top: -5px;
+}
+
+.box:nth-child(2) h2:before {
+    background-color: #89A5EE;
+}
+
+.box:nth-child(3) h2:before {
+    background-color: #6CC48F;
+}
+
+.box .btn {
+    padding: 12px 15px;
+}   
