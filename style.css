@@ -179,6 +179,7 @@ body {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
 }
 
 .box.current {
@@ -233,3 +234,31 @@ body {
 .box .btn {
     padding: 12px 15px;
 }   
+
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 160px 0;
+        padding: 50px;
+    }
+    .storage-chart {
+        width: 150px;
+        height: 150px;
+    }
+    .circle {
+        width: 130px;
+        height: 130px;
+    }
+    .box {
+        background: #eee;
+        width: 400px;
+        height: 160px;
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+}
